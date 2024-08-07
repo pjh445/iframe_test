@@ -3,8 +3,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     const nav = document.querySelector("header nav");            
     const menu = document.getElementById("menu");
     const header = document.getElementsByTagName("header")[0];
-    const parentHeight = window.parent.innerHeight;
-    alert(clientHeight);
+    const parentHeight = top.innerHeight;
     let n = 0;
     const navSlide = () => {
 
