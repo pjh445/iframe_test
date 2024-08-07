@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+* {margin:0; padding:0; box-sizing: border-box;}
+
+        ::-webkit-scrollbar {width:0;}
+
+        header {
+            background: rgba(255,255,255, 0.7); padding:20px; 
+            /* position:fixed; top:0; width:100vw; z-index: 1; */
+        }
+        header nav {
+            max-width: 600px; margin-left:100px;
+            display: flex; justify-content: space-between;
+        }
+        header nav a { 
+            font: italic 400 1.5rem /180%  "Inter", sans-serif;
+            color:black; text-decoration: none;
+            transition: transform 0.5s;
+        }
+        header nav a:hover {
+            transform: translateY(-5px); color:white; text-shadow: 1px 1px 5px rgb(0, 9, 87);
+        }
+        #menu {
+            background: none; border:none; font-size:2rem; display: none;            
+        }
+
+        /*******작은뷰포트(0~600까지 적용)*******/
+        @media (max-width: 600px) {
+                    #menu {display:block; margin-right:0; margin-left:auto;}            
+                    header nav {
+                        position: fixed; background: rgba(0,0,0, 0.8);
+                        left:0; top:70px; width:100%; 
+                        margin-left:0; height:100vh;
+                        flex-direction: column; justify-content: flex-start;
+                        text-align: center; height:0; overflow: hidden;
+                        transition: height 1.5s, padding 1s;
+                    }
+                    header nav.active {
+                        padding:50px; height:100vh;
+                    }
+                    header nav a {
+                        color:white; padding:20px;
+                    }
+        }
