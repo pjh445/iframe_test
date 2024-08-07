@@ -33,7 +33,7 @@
                         margin-left:0; height:100vh;
                         flex-direction: column; justify-content: flex-start;
                         text-align: center; height:0; overflow: hidden;
-                        transition: height 1.5s, padding 1s;
+                        transition: height 0.5s, padding 0.1s;
                     }
                     header nav.active {
                         padding:50px; height:100vh;
