@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             menu.textContent = "menu";
             nav.classList.remove("active");
             iframeH.classList.remove('h');
+            iframeH.style.transition="height 0.5s";
             document.body.style.overflow="auto";
             n = 0;
         }
