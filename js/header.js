@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
     const nav = document.querySelector("header nav");            
     const menu = document.getElementById("menu");
     const header = document.getElementsByTagName("header")[0];
-    const parentHeight = window.parent.document.body.clientHeight;
+    const iframeH = window.parent.document.querySelector("iframe#header"); 
+    
     let n = 0;
     const navSlide = () => {
 
@@ -12,13 +13,12 @@ document.addEventListener("DOMContentLoaded", ()=>{
         if(n == 0 ) {
             menu.textContent = "close";
             nav.classList.add("active");
-            header.style.height= `${parentHeight}px`;
-            document.body.style.overflow="hidden";            
+            iframeH.classList.add('h');
             n++;
         } else {
             menu.textContent = "menu";
             nav.classList.remove("active");
-            header.style.height= "100px";
+            iframeH.classList.remove('h');
             document.body.style.overflow="auto";
             n = 0;
         }
