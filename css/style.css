@@ -66,4 +66,5 @@
         /*******작은뷰포트(0~600까지 적용)*******/
         @media (max-width: 600px) {
             body#index  {background-size:auto 100vh; }
+            iframe#header.h { height:100vh;   }
         }
